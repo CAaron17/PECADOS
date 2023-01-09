@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/pecado.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom center;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+/*********************    HEADER - PORTADA    *********************/
+
+.portada {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portada .logo {
+    width: 60px;
+    margin-left: 20px;
+    transition: all 1s ease;
+}
+
+.bar-btn{
+    color: rgb(200, 0, 150);
+    font-size: 40px;
+    right: 5px;
+    position: fixed;
+    cursor: pointer;
+}
+
+.bar-btn:hover {
+    color: rgb(250, 0, 0);
+}
+
+.nav-menu {
+    position: fixed;;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background-color: rgb(0,0,0);
+    text-align: center;
+    transition: all 1s ease;
+    z-index: 10;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0px;
+    transition: all 0.5s ease;
+}
+
+.nav-menu li a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.nav-menu li a:hover {
+    color: rgb(250, 0, 0);
+    font-size: 1.7rem;
+}
+
+#check {
+    display: none;
+}
+
+#check1 {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 50vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+} 
+
+#check1:checked ~ .nav-menu {
+    height: 0vh;
+}
+
+#check1:checked ~ .nav-menu li {
+    display: none;
+}
+
+/*********************    HEADER - TITULO    *********************/
+
+.titulo {
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+    color: rgb(250, 0, 0);
+}
+
+.titulo h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: rgb(150, 0, 0);
+}
+
+.contenedor_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.boton {
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: rgb(90, 0, 0);
+    color: #fff;
+    transition: all 1s ease;
+}
+
+.boton:hover {
+    background-color: #fff;
+    color: rgb(248, 0, 0);
+}
+
+/*******************  SECTION - ESTILOS GENERALES: AUTORA, SINOPSIS Y PERSONAJES  *******************/
+
+.subtitulo {
+    text-align: center;
+    color: rgb(200, 0, 0);
+    font-size: 40px;
+    margin-bottom: 40px;
+    transition: all 1s ease;
+}
+
+.parrafo {
+    width: 80%;
+    text-align: justify;
+    font-size: 20px;
+    padding-top: 20px;
+    color: rgb(250 , 250, 250);
+    transition: all .8s ease;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.parrafo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(190, 0, 0);
+    transition: .8s;
+}
+
+.info .cuerpo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_general {
+    width: 80%;
+    object-fit: cover;
+}
+
+.autora .img_general {
+    width: 400px;
+}
+
+.line {
+    margin: 2em 0;
+}
+/******************  SECTION - PERSONAJES  ******************/
+
+.personajes .contenedor {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.personajes .contenedor .card {
+    width: 300px;
+    height: 400px;
+    padding: 15px;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    animation: escalar 1.5s infinite alternate;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+
+.card h2 {
+    width: 100%;
+    font-size: 35px;
+    position: absolute;
+    top: 40%;
+    left: 1.05%;
+    text-align: center;
+    margin: auto;
+    visibility: hidden;
+    opacity: 0;
+    color: rgb(250, 0, 0);
+    transition: all 1s ease;
+}
+
+.contenedor .card:hover h2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenedor .card:hover img {
+    opacity: 0.5;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgb(250, 0, 0);
+    border-radius: 40%;
+}
+
+/**************** SECTION - GENERAL (LASCIVIA, LUJURIA, DESEO) ****************/
+
+.libros-h2 {
+    text-align: center;
+    color: rgb(200, 0, 0);
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+}
+
+.libros-h3 {
+    text-align: center;
+    color: rgb(100, 0, 100);
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+}
+
+.libros .leer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.leer a {
+    padding: 10px 30px;
+    margin: 40px 0;
+    font-size: 20px;
+    background-color: rgb(90, 0, 0);
+    color: #fff;
+    transition: all 1s ease;
+}
+
+.libros a:hover {
+    background-color: #fff;
+    color: rgb(248, 0, 0);
+}
+
+.libros .cuerpo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.libros .cuerpo p {
+    width: 80%;
+    text-align: justify;
+    padding-top: 25px;
+    font-size: 20px;
+    color: rgb(250 , 250, 250);
+    transition: all .8s ease;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+}
+
+.libros .cuerpo p:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(190, 0, 0);
+    transition: .8s;
+}
+
+.deseo .cuerpo img {
+    margin-bottom: 15px;
+}
+
+/*********************  RESPONSIVE  *********************/
+
+@media screen and (min-width: 768px) {
+    header nav img {
+        width: 80px;
+        transition: all 1s ease;
+        margin-left: 50px;
+    }
+    
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        margin-right: 70px;
+        background: none;
+        text-align: right;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+    }
+
+    .nav-menu li a {
+        font-size: 1.8rem;
+        color: #fff
+    }
+
+    .nav-menu li a:hover {
+        color: rgb(250, 0, 0);
+        font-size: 2rem;
+    }
+
+    .nav-menu .li1 {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ********************************************************* */
+
+@media screen and (min-width: 1200px) {
+
+    .titulo h1{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        font-size: 100px;
+        margin-top: -50px;
+        margin-bottom: 30px;
+        transition: all 1s ease;
+    }
+
+    .titulo h2 {
+        font-size: 50px;
+    }
+
+    .boton {
+        margin: 20px;
+        padding: 20px 60px;
+        font-size: 20px;
+        transition: all 1s ease;
+    }
+
+    .autora {
+        width: 80%;
+        margin: auto;
+    }
+
+    .subtitulo {
+        font-size: 60px;
+        transition: all 1s ease;
+    }
+
+    .autora .cuerpo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .autora .cuerpo p {
+        margin-left: 100px;
+        transition: all 1s ease;
+    }
+
+    .sinopsis {
+        width: 60%;
+        margin: auto;
+    }
+
+    .sinopsis h2 {
+        font-size: 60px;
+        transition: all 1s ease;
+    }
+
+    .sinopsis .cuerpo p {
+        padding-top: 50px;
+    }
+
+    .personajes > h2 {
+        font-size: 60px;
+        transition: all 1s ease;
+    }
+
+    .personajes .contenedor {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    /***********  GENERAL - LIBROS  ***********/
+
+    .libros {
+        width: 80%;
+        margin: auto;
+    }
+
+    .libros .libros-h2 {
+        font-size: 60px;
+        margin-top: 100px;
+        transition: all 1s ease;
+    }
+
+    .libros .libros-h3 {
+        font-size: 45px;
+    }
+
+    .libros .cuerpo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .libros .cuerpo p {
+        margin-left: 100px;
+        transition: all 1s ease;
+    }
+
+    /* ********************************************************* */
+
+    @media screen and (min-width: 1400px) {
+        .autora {
+            width: 60%;
+        }
+        .libros {
+            width: 60%;
+        }
+    }
+}
+
+/****************** ANIMACIONES  ******************/
+
+@keyframes escalar {
+    to {
+        transform: scale(1);
+    }
+    from {
+        transform: scale(1.05);
+    }
+}
